@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,54 +14,141 @@ namespace BuildQtyTracker
 {
     public partial class Form1 : Form
     {
-        static private string path;
-        static private int count=0;
-        static private Settings1 settings=new Settings1();
-        static private SheetsClass sheets = new SheetsClass("Desktop Application 1", "17ZA5GDt2SadFFgdNoA3rtCPNJ6kE9D4ojA9BFU6NjaQ", path);
+        static private int count;
+        static private Settings1 settings = new Settings1();
+        static private SheetsClass sheets = new SheetsClass("Desktop Application 1", "17ZA5GDt2SadFFgdNoA3rtCPNJ6kE9D4ojA9BFU6NjaQ");
+        static private List<SKU> list = new List<SKU>();
+        static private bool isPrebuild = false;
         public Form1()
         {
             InitializeComponent();
             sheets.Authentication();
-            qty_Label.Text = settings.Setting.ToString();
+            ChangeState(settings.State);
+            qty_Label.Text = settings.Count.ToString();
+            count = settings.Count;
+            list = ReadSkus();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
             {
-                settings.Setting = 0;
+                settings.Count = 0;
                 settings.Save();
-                qty_Label.Text = settings.Setting.ToString();
+                qty_Label.Text = settings.Count.ToString();
             }
             else
             {
                 MessageBox.Show("Check the box to reset");
-            }    
+            }
+
+        }
+        private void ChangeState(string state)
+        {
+            if (state == "p")
+            {
+                Label_Top_Left.Text = settings.SKU;
+                New_Prebuild_Button.Visible = true;
+                orderId_box.Visible = false;
+                Label_Top_Left.Focus();
+                settings.State = "p";
+                settings.Save();
+            }
+            else
+            {
+                Label_Top_Left.Text = "Order Id";
+                New_Prebuild_Button.Visible= false;
+                orderId_box.Visible = true;
+                orderId_box.Focus();
+                settings.State = "n";
+                settings.Save();
+            }
+        }
+        private string OrderIDManager(string orderId)
+        {
+            string value=orderId;
+            foreach (SKU sku in list)
+            {
+                if (sku.SKU_ID==Int32.Parse(orderId))
+                {
+                    value = sku.SKU_Value;
+                    settings.SKU = value;
+                    settings.Save();
+                    ChangeState("p");
+                    break;
+                }
+            }
+            return value;
+        }
+        private void Keydown(object sender, KeyEventArgs e)
+        {
+            if (settings.State == "p")
+            {
+                if (e.KeyCode == Keys.NumPad1)
+                {
+                    SendToSheets(settings.SKU);
+                }
+            }
+            else
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    SendToSheets(OrderIDManager(orderId_box.Text));
+                    orderId_box.Clear();
+                }
+            }
             
         }
-
-        private void keydown(object sender, KeyEventArgs e)
+        private void SendToSheets(string orderId)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (!String.IsNullOrEmpty(orderId))
             {
-                if (!String.IsNullOrEmpty(orderId_box.Text))
-                {
-                    List<object> list = new List<object>();
-                    List<object> date=new List<object>();
-                    list.Add(orderId_box.Text);
-                    list.Add(DateTime.Now.ToString("dd/MMM/yy"));
-                    sheets.UpdateSheet(list, "Built Orders", "!A2", "A");
-                    count++;
-                    settings.Setting = count;
-                    settings.Save();
-                    qty_Label.Text = count.ToString();
-                }
-                else
-                {
-                    MessageBox.Show("No order ID");
-                }
-
+                List<object> list = new List<object>();
+                List<object> date = new List<object>();
+                list.Add(orderId);
+                list.Add(DateTime.Now.ToString("dd/MMM/yy"));
+                sheets.UpdateSheet(list, "Built Orders", "!A2", "A");
+                count++;
+                settings.Count = count;
+                settings.Save();
+                qty_Label.Text = count.ToString();
             }
+            else
+            {
+                MessageBox.Show("No order ID");
+            }
+        }
+        private List<SKU> ReadSkus()
+        {
+            List<SKU> skus=new List<SKU>();
+            
+            string path = Application.StartupPath + "\\SKUS.csv";
+            if (File.Exists(path))
+            {
+                string line = string.Empty;
+                using (StreamReader sr = new StreamReader(path))
+                {
+                    do 
+                    {
+                        line = sr.ReadLine();
+                        if(!String.IsNullOrEmpty(line))
+                        {
+                            string[] parts = line.Split(new char[] { '\t' });
+                            string skup = parts[0];
+                            int idp=int.Parse(parts[1]);
+                            skus.Add(new SKU (skup,idp));
+                        }
+                               
+                    }
+                    while(!String.IsNullOrEmpty(line));
+                }
+            }
+            return skus;
+        }
+
+        private void New_Prebuild_Button_Click(object sender, EventArgs e)
+        {
+            ChangeState("n");
         }
     }
 }

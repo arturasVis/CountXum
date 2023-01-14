@@ -20,14 +20,12 @@ namespace BuildQtyTracker
         private string ApplicationName;
         private string spreadsheetId;
         SheetsService service;
-        private string path;
         UserCredential credential;
 
-        public SheetsClass(string ApplicationName, string spreadsheetId, string path)
+        public SheetsClass(string ApplicationName, string spreadsheetId)
         {
             this.spreadsheetId = spreadsheetId;
             this.ApplicationName = ApplicationName;
-            this.path = path;
         }
         public void Authentication()
         {

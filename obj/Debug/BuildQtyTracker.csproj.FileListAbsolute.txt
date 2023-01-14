@@ -26,3 +26,24 @@ C:\Users\1234\source\repos\BuildQtyTracker\BuildQtyTracker\bin\Debug\Google.Apis
 C:\Users\1234\source\repos\BuildQtyTracker\BuildQtyTracker\bin\Debug\Newtonsoft.Json.xml
 C:\Users\1234\source\repos\BuildQtyTracker\BuildQtyTracker\obj\Debug\BuildQtyTracker.Form1.resources
 C:\Users\1234\source\repos\BuildQtyTracker\BuildQtyTracker\obj\Debug\BuildQtyTracker.csproj.CopyComplete
+E:\New folder (2)\CountXum\bin\Debug\BuildQtyTracker.exe.config
+E:\New folder (2)\CountXum\bin\Debug\BuildQtyTracker.exe
+E:\New folder (2)\CountXum\bin\Debug\BuildQtyTracker.pdb
+E:\New folder (2)\CountXum\bin\Debug\Newtonsoft.Json.dll
+E:\New folder (2)\CountXum\bin\Debug\Google.Apis.pdb
+E:\New folder (2)\CountXum\bin\Debug\Google.Apis.xml
+E:\New folder (2)\CountXum\bin\Debug\Google.Apis.Auth.pdb
+E:\New folder (2)\CountXum\bin\Debug\Google.Apis.Auth.xml
+E:\New folder (2)\CountXum\bin\Debug\Google.Apis.Core.pdb
+E:\New folder (2)\CountXum\bin\Debug\Google.Apis.Core.xml
+E:\New folder (2)\CountXum\bin\Debug\Google.Apis.Sheets.v4.pdb
+E:\New folder (2)\CountXum\bin\Debug\Google.Apis.Sheets.v4.xml
+E:\New folder (2)\CountXum\obj\Debug\BuildQtyTracker.csproj.AssemblyReference.cache
+E:\New folder (2)\CountXum\obj\Debug\BuildQtyTracker.csproj.SuggestedBindingRedirects.cache
+E:\New folder (2)\CountXum\obj\Debug\BuildQtyTracker.Form1.resources
+E:\New folder (2)\CountXum\obj\Debug\BuildQtyTracker.Properties.Resources.resources
+E:\New folder (2)\CountXum\obj\Debug\BuildQtyTracker.csproj.GenerateResource.cache
+E:\New folder (2)\CountXum\obj\Debug\BuildQtyTracker.csproj.CoreCompileInputs.cache
+E:\New folder (2)\CountXum\obj\Debug\BuildQtyTracker.csproj.CopyComplete
+E:\New folder (2)\CountXum\obj\Debug\BuildQtyTracker.exe
+E:\New folder (2)\CountXum\obj\Debug\BuildQtyTracker.pdb

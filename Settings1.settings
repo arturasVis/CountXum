@@ -2,8 +2,14 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BuildQtyTracker" GeneratedClassName="Settings1">
   <Profiles />
   <Settings>
-    <Setting Name="Setting" Type="System.Int32" Scope="User">
+    <Setting Name="Count" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="SKU" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="State" Type="System.String" Scope="User">
+      <Value Profile="(Default)">n</Value>
     </Setting>
   </Settings>
 </SettingsFile>

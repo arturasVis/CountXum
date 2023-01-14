@@ -81,6 +81,7 @@
       <DependentUpon>Settings1.settings</DependentUpon>
     </Compile>
     <Compile Include="SheetsClass.cs" />
+    <Compile Include="SKU.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
