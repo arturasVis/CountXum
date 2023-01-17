@@ -18,7 +18,6 @@ namespace BuildQtyTracker
         static private Settings1 settings = new Settings1();
         static private SheetsClass sheets = new SheetsClass("Desktop Application 1", "17ZA5GDt2SadFFgdNoA3rtCPNJ6kE9D4ojA9BFU6NjaQ");
         static private List<SKU> list = new List<SKU>();
-        static private bool isPrebuild = false;
         public Form1()
         {
             InitializeComponent();
@@ -34,6 +33,7 @@ namespace BuildQtyTracker
             if (checkBox1.Checked)
             {
                 settings.Count = 0;
+                count=0;
                 settings.Save();
                 qty_Label.Text = settings.Count.ToString();
             }
@@ -69,7 +69,7 @@ namespace BuildQtyTracker
             string value=orderId;
             foreach (SKU sku in list)
             {
-                if (sku.SKU_ID==Int32.Parse(orderId))
+                if (sku.SKU_ID==Int32.Parse(orderId.Trim()))
                 {
                     value = sku.SKU_Value;
                     settings.SKU = value;
@@ -91,7 +91,7 @@ namespace BuildQtyTracker
             }
             else
             {
-                if (e.KeyCode == Keys.Enter)
+                if (e.KeyCode == Keys.Enter && !string.IsNullOrEmpty(orderId_box.Text))
                 {
                     SendToSheets(OrderIDManager(orderId_box.Text));
                     orderId_box.Clear();

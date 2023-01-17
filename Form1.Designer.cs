@@ -44,7 +44,6 @@
             this.orderId_box.Name = "orderId_box";
             this.orderId_box.Size = new System.Drawing.Size(153, 20);
             this.orderId_box.TabIndex = 0;
-            this.orderId_box.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Keydown);
             // 
             // Label_Top_Left
             // 
