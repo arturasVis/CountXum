@@ -26,3 +26,44 @@ C:\Users\1234\source\repos\BuildQtyTracker\BuildQtyTracker\obj\Release\BuildQtyT
 C:\Users\1234\source\repos\BuildQtyTracker\BuildQtyTracker\obj\Release\BuildQtyTracker.csproj.CopyComplete
 C:\Users\1234\source\repos\BuildQtyTracker\BuildQtyTracker\obj\Release\BuildQtyTracker.exe
 C:\Users\1234\source\repos\BuildQtyTracker\BuildQtyTracker\obj\Release\BuildQtyTracker.pdb
+E:\New folder (2)\CountXum\bin\Release\BuildQtyTracker.exe.config
+E:\New folder (2)\CountXum\bin\Release\BuildQtyTracker.exe
+E:\New folder (2)\CountXum\bin\Release\BuildQtyTracker.pdb
+E:\New folder (2)\CountXum\bin\Release\BarcodeStandard.dll
+E:\New folder (2)\CountXum\bin\Release\Microsoft.Bcl.AsyncInterfaces.dll
+E:\New folder (2)\CountXum\bin\Release\Newtonsoft.Json.dll
+E:\New folder (2)\CountXum\bin\Release\System.Buffers.dll
+E:\New folder (2)\CountXum\bin\Release\System.Drawing.Common.dll
+E:\New folder (2)\CountXum\bin\Release\System.Memory.dll
+E:\New folder (2)\CountXum\bin\Release\System.Numerics.Vectors.dll
+E:\New folder (2)\CountXum\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+E:\New folder (2)\CountXum\bin\Release\System.Text.Encodings.Web.dll
+E:\New folder (2)\CountXum\bin\Release\System.Text.Json.dll
+E:\New folder (2)\CountXum\bin\Release\System.Threading.Tasks.Extensions.dll
+E:\New folder (2)\CountXum\bin\Release\System.ValueTuple.dll
+E:\New folder (2)\CountXum\bin\Release\Google.Apis.pdb
+E:\New folder (2)\CountXum\bin\Release\Google.Apis.xml
+E:\New folder (2)\CountXum\bin\Release\Google.Apis.Auth.pdb
+E:\New folder (2)\CountXum\bin\Release\Google.Apis.Auth.xml
+E:\New folder (2)\CountXum\bin\Release\Google.Apis.Core.pdb
+E:\New folder (2)\CountXum\bin\Release\Google.Apis.Core.xml
+E:\New folder (2)\CountXum\bin\Release\Google.Apis.Sheets.v4.pdb
+E:\New folder (2)\CountXum\bin\Release\Google.Apis.Sheets.v4.xml
+E:\New folder (2)\CountXum\bin\Release\Microsoft.Bcl.AsyncInterfaces.xml
+E:\New folder (2)\CountXum\bin\Release\System.Buffers.xml
+E:\New folder (2)\CountXum\bin\Release\System.Memory.xml
+E:\New folder (2)\CountXum\bin\Release\System.Numerics.Vectors.xml
+E:\New folder (2)\CountXum\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+E:\New folder (2)\CountXum\bin\Release\System.Text.Encodings.Web.xml
+E:\New folder (2)\CountXum\bin\Release\System.Text.Json.xml
+E:\New folder (2)\CountXum\bin\Release\System.Threading.Tasks.Extensions.xml
+E:\New folder (2)\CountXum\bin\Release\System.ValueTuple.xml
+E:\New folder (2)\CountXum\obj\Release\BuildQtyTracker.csproj.AssemblyReference.cache
+E:\New folder (2)\CountXum\obj\Release\BuildQtyTracker.csproj.SuggestedBindingRedirects.cache
+E:\New folder (2)\CountXum\obj\Release\BuildQtyTracker.Form1.resources
+E:\New folder (2)\CountXum\obj\Release\BuildQtyTracker.Properties.Resources.resources
+E:\New folder (2)\CountXum\obj\Release\BuildQtyTracker.csproj.GenerateResource.cache
+E:\New folder (2)\CountXum\obj\Release\BuildQtyTracker.csproj.CoreCompileInputs.cache
+E:\New folder (2)\CountXum\obj\Release\BuildQtyTracker.csproj.CopyComplete
+E:\New folder (2)\CountXum\obj\Release\BuildQtyTracker.exe
+E:\New folder (2)\CountXum\obj\Release\BuildQtyTracker.pdb

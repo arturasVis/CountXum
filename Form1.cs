@@ -18,6 +18,8 @@ namespace BuildQtyTracker
         static private Settings1 settings = new Settings1();
         static private SheetsClass sheets = new SheetsClass("Desktop Application 1", "17ZA5GDt2SadFFgdNoA3rtCPNJ6kE9D4ojA9BFU6NjaQ");
         static private List<SKU> list = new List<SKU>();
+        static private ZebraLabelPrinter zebra = new ZebraLabelPrinter("Zebra LP2844");
+        static private DBManager dBManager = new DBManager();
         public Form1()
         {
             InitializeComponent();
@@ -35,6 +37,7 @@ namespace BuildQtyTracker
                 settings.Count = 0;
                 count=0;
                 settings.Save();
+                ChangeState("n");
                 qty_Label.Text = settings.Count.ToString();
             }
             else
@@ -86,20 +89,19 @@ namespace BuildQtyTracker
             {
                 if (e.KeyCode == Keys.NumPad1)
                 {
-                    SendToSheets(settings.SKU);
+                    Execute(settings.SKU);
                 }
             }
             else
             {
                 if (e.KeyCode == Keys.Enter && !string.IsNullOrEmpty(orderId_box.Text))
                 {
-                    SendToSheets(OrderIDManager(orderId_box.Text));
+                    Execute(OrderIDManager(orderId_box.Text));
                     orderId_box.Clear();
                 }
             }
-            
         }
-        private void SendToSheets(string orderId)
+        private void Execute(string orderId)
         {
             if (!String.IsNullOrEmpty(orderId))
             {
@@ -107,7 +109,12 @@ namespace BuildQtyTracker
                 List<object> date = new List<object>();
                 list.Add(orderId);
                 list.Add(DateTime.Now.ToString("dd/MMM/yy"));
+                var dt=dBManager.SelectSpecific("History", "Channel", "Prebuilt");
+                string pId = "P" + $"{dt.Rows.Count}";
                 sheets.UpdateSheet(list, "Built Orders", "!A2", "A");
+                dBManager.InsertQuerry($"INSERT INTO History(Orderid,SKU,QTY,CHannel) VALUES " +
+                            $"('{pId}','{orderId}','1','Prebuilt')");
+                zebra.PrintLabelWithText(pId, orderId);
                 count++;
                 settings.Count = count;
                 settings.Save();
