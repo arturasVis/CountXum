@@ -9,16 +9,20 @@ public class ZebraLabelPrinter
     private string _printerName;
     private string _barcodeData;
     private string _labelText;
+    private int _pageCount;
+    private int _numPagesToPrint;
 
     public ZebraLabelPrinter(string printerName)
     {
         _printerName = printerName;
     }
 
-    public void PrintLabelWithText(string barcodeData, string labelText)
+    public void PrintLabelWithText(string barcodeData, string labelText, int numPagesToPrint)
     {
         _barcodeData = barcodeData;
         _labelText = labelText;
+        _numPagesToPrint = numPagesToPrint;
+        _pageCount = 0;
 
         // Set up the PrintDocument and the PrintPage event handler
         using (var printDocument = new PrintDocument())
@@ -45,6 +49,12 @@ public class ZebraLabelPrinter
         {
             e.Graphics.DrawString(_labelText, font, Brushes.Black, 0, 20);
         }
+
+        // Increment the page count
+        _pageCount++;
+
+        // Set HasMorePages to true if there are more pages to print
+        e.HasMorePages = (_pageCount < _numPagesToPrint);
     }
 
     private int InchesToHundredths(float inches)

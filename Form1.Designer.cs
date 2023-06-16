@@ -35,6 +35,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.New_Prebuild_Button = new System.Windows.Forms.Button();
+            this.Print_Button = new System.Windows.Forms.Button();
+            this.Print_amount_textbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // orderId_box
@@ -111,6 +113,26 @@
             this.New_Prebuild_Button.Visible = false;
             this.New_Prebuild_Button.Click += new System.EventHandler(this.New_Prebuild_Button_Click);
             // 
+            // Print_Button
+            // 
+            this.Print_Button.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Print_Button.Location = new System.Drawing.Point(543, 138);
+            this.Print_Button.Name = "Print_Button";
+            this.Print_Button.Size = new System.Drawing.Size(110, 23);
+            this.Print_Button.TabIndex = 7;
+            this.Print_Button.Text = "Print";
+            this.Print_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.Print_Button.UseVisualStyleBackColor = true;
+            this.Print_Button.Click += new System.EventHandler(this.Print_Button_Click);
+            // 
+            // Print_amount_textbox
+            // 
+            this.Print_amount_textbox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.Print_amount_textbox.Location = new System.Drawing.Point(438, 141);
+            this.Print_amount_textbox.Name = "Print_amount_textbox";
+            this.Print_amount_textbox.Size = new System.Drawing.Size(71, 20);
+            this.Print_amount_textbox.TabIndex = 8;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -118,6 +140,8 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(742, 176);
+            this.Controls.Add(this.Print_amount_textbox);
+            this.Controls.Add(this.Print_Button);
             this.Controls.Add(this.New_Prebuild_Button);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button1);
@@ -144,6 +168,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button New_Prebuild_Button;
+        private System.Windows.Forms.Button Print_Button;
+        private System.Windows.Forms.TextBox Print_amount_textbox;
     }
 }
 

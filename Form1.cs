@@ -18,7 +18,7 @@ namespace BuildQtyTracker
         static private Settings1 settings = new Settings1();
         static private SheetsClass sheets = new SheetsClass("Desktop Application 1", "17ZA5GDt2SadFFgdNoA3rtCPNJ6kE9D4ojA9BFU6NjaQ");
         static private List<SKU> list = new List<SKU>();
-        static private ZebraLabelPrinter zebra = new ZebraLabelPrinter("Zebra LP2844");
+        static private ZebraLabelPrinter zebra = new ZebraLabelPrinter("ZEBRA");
         static private DBManager dBManager = new DBManager();
         public Form1()
         {
@@ -89,41 +89,53 @@ namespace BuildQtyTracker
             {
                 if (e.KeyCode == Keys.NumPad1)
                 {
-                    Execute(settings.SKU);
+                    Execute(settings.SKU,1);
                 }
             }
             else
             {
                 if (e.KeyCode == Keys.Enter && !string.IsNullOrEmpty(orderId_box.Text))
                 {
-                    Execute(OrderIDManager(orderId_box.Text));
+                    Execute(OrderIDManager(orderId_box.Text),1);
                     orderId_box.Clear();
                 }
             }
         }
-        private void Execute(string orderId)
+        private void Execute(string orderId,int n)
         {
-            if (!String.IsNullOrEmpty(orderId))
+            try
             {
-                List<object> list = new List<object>();
-                List<object> date = new List<object>();
-                list.Add(orderId);
-                list.Add(DateTime.Now.ToString("dd/MMM/yy"));
-                var dt=dBManager.SelectSpecific("History", "Channel", "Prebuilt");
-                string pId = "P" + $"{dt.Rows.Count}";
-                sheets.UpdateSheet(list, "Built Orders", "!A2", "A");
-                dBManager.InsertQuerry($"INSERT INTO History(Orderid,SKU,QTY,CHannel) VALUES " +
-                            $"('{pId}','{orderId}','1','Prebuilt')");
-                zebra.PrintLabelWithText(pId, orderId);
-                count++;
-                settings.Count = count;
-                settings.Save();
-                qty_Label.Text = count.ToString();
+                if (!String.IsNullOrEmpty(orderId))
+                {
+                    for(int i=0;i<n;i++)
+                    {
+                        List<object> list = new List<object>();
+                        List<object> date = new List<object>();
+                        list.Add(orderId);
+                        list.Add(DateTime.Now.ToString("dd/MMM/yy"));
+                        var dt = dBManager.SelectSpecific("History", "Channel", "Prebuilt");
+                        string pId = "P" + $"{dt.Rows.Count}";
+                        sheets.UpdateSheet(list, "Built Orders", "!A2", "A");
+                        dBManager.InsertQuerry($"INSERT INTO History(Orderid,SKU,QTY,CHannel) VALUES " +
+                                    $"('{pId}','{orderId}','1','Prebuilt')");
+                        zebra.PrintLabelWithText(pId, orderId, 1);
+                        count++;
+                        settings.Count = count;
+                        settings.Save();
+                        qty_Label.Text = count.ToString();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No order ID");
+                }
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("No order ID");
+
+                throw;
             }
+            
         }
         private List<SKU> ReadSkus()
         {
@@ -156,6 +168,18 @@ namespace BuildQtyTracker
         private void New_Prebuild_Button_Click(object sender, EventArgs e)
         {
             ChangeState("n");
+        }
+
+        private void Print_Button_Click(object sender, EventArgs e)
+        {
+            if(settings.State== "p")
+            {
+                Execute(settings.SKU,Int32.Parse(Print_amount_textbox.Text));
+            }
+            else
+            {
+                MessageBox.Show("Set SKU first!");
+            }
         }
     }
 }
