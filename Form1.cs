@@ -111,10 +111,11 @@ namespace BuildQtyTracker
                     {
                         List<object> list = new List<object>();
                         List<object> date = new List<object>();
-                        list.Add(orderId);
-                        list.Add(DateTime.Now.ToString("dd/MMM/yy"));
                         var dt = dBManager.SelectSpecific("History", "Channel", "Prebuilt");
                         string pId = "P" + $"{dt.Rows.Count}";
+                        list.Add(pId);
+                        list.Add(orderId);
+                        list.Add(DateTime.Now.ToString("dd/MMM/yy"));
                         sheets.UpdateSheet(list, "Built Orders", "!A2", "A");
                         dBManager.InsertQuerry($"INSERT INTO History(Orderid,SKU,QTY,CHannel) VALUES " +
                                     $"('{pId}','{orderId}','1','Prebuilt')");
