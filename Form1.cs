@@ -20,6 +20,7 @@ namespace BuildQtyTracker
         static private List<SKU> list = new List<SKU>();
         static private ZebraLabelPrinter zebra = new ZebraLabelPrinter("ZEBRA");
         static private DBManager dBManager = new DBManager();
+        static private LaptopForm laptop = new LaptopForm();
         public Form1()
         {
             InitializeComponent();
@@ -181,6 +182,12 @@ namespace BuildQtyTracker
             {
                 MessageBox.Show("Set SKU first!");
             }
+        }
+
+        private void laptopButton_Click(object sender, EventArgs e)
+        {
+            laptop.Show();
+            this.Hide();
         }
     }
 }

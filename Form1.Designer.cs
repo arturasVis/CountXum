@@ -37,6 +37,7 @@
             this.New_Prebuild_Button = new System.Windows.Forms.Button();
             this.Print_Button = new System.Windows.Forms.Button();
             this.Print_amount_textbox = new System.Windows.Forms.TextBox();
+            this.laptopButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // orderId_box
@@ -61,7 +62,7 @@
             this.qty_Label.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.qty_Label.AutoSize = true;
             this.qty_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 69F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qty_Label.Location = new System.Drawing.Point(580, 25);
+            this.qty_Label.Location = new System.Drawing.Point(587, 25);
             this.qty_Label.Name = "qty_Label";
             this.qty_Label.Size = new System.Drawing.Size(95, 104);
             this.qty_Label.TabIndex = 2;
@@ -72,7 +73,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 69F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(269, 25);
+            this.label1.Location = new System.Drawing.Point(312, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(248, 104);
             this.label1.TabIndex = 3;
@@ -81,7 +82,7 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.Location = new System.Drawing.Point(12, 141);
+            this.button1.Location = new System.Drawing.Point(12, 415);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
@@ -93,7 +94,7 @@
             // 
             this.checkBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(114, 145);
+            this.checkBox1.Location = new System.Drawing.Point(143, 419);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(106, 17);
             this.checkBox1.TabIndex = 5;
@@ -103,7 +104,7 @@
             // New_Prebuild_Button
             // 
             this.New_Prebuild_Button.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.New_Prebuild_Button.Location = new System.Drawing.Point(287, 139);
+            this.New_Prebuild_Button.Location = new System.Drawing.Point(255, 415);
             this.New_Prebuild_Button.Name = "New_Prebuild_Button";
             this.New_Prebuild_Button.Size = new System.Drawing.Size(110, 23);
             this.New_Prebuild_Button.TabIndex = 6;
@@ -116,7 +117,7 @@
             // Print_Button
             // 
             this.Print_Button.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Print_Button.Location = new System.Drawing.Point(543, 138);
+            this.Print_Button.Location = new System.Drawing.Point(491, 419);
             this.Print_Button.Name = "Print_Button";
             this.Print_Button.Size = new System.Drawing.Size(110, 23);
             this.Print_Button.TabIndex = 7;
@@ -128,10 +129,21 @@
             // Print_amount_textbox
             // 
             this.Print_amount_textbox.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.Print_amount_textbox.Location = new System.Drawing.Point(438, 141);
+            this.Print_amount_textbox.Location = new System.Drawing.Point(392, 419);
             this.Print_amount_textbox.Name = "Print_amount_textbox";
             this.Print_amount_textbox.Size = new System.Drawing.Size(71, 20);
             this.Print_amount_textbox.TabIndex = 8;
+            // 
+            // laptopButton
+            // 
+            this.laptopButton.Location = new System.Drawing.Point(622, 419);
+            this.laptopButton.Name = "laptopButton";
+            this.laptopButton.Size = new System.Drawing.Size(75, 23);
+            this.laptopButton.TabIndex = 9;
+            this.laptopButton.Text = "Laptops";
+            this.laptopButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.laptopButton.UseVisualStyleBackColor = true;
+            this.laptopButton.Click += new System.EventHandler(this.laptopButton_Click);
             // 
             // Form1
             // 
@@ -139,7 +151,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(742, 176);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.laptopButton);
             this.Controls.Add(this.Print_amount_textbox);
             this.Controls.Add(this.Print_Button);
             this.Controls.Add(this.New_Prebuild_Button);
@@ -170,6 +183,7 @@
         private System.Windows.Forms.Button New_Prebuild_Button;
         private System.Windows.Forms.Button Print_Button;
         private System.Windows.Forms.TextBox Print_amount_textbox;
+        private System.Windows.Forms.Button laptopButton;
     }
 }
 

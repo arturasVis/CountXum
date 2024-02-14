@@ -67,3 +67,45 @@ E:\New folder (2)\CountXum\bin\Debug\System.Text.Encodings.Web.xml
 E:\New folder (2)\CountXum\bin\Debug\System.Text.Json.xml
 E:\New folder (2)\CountXum\bin\Debug\System.Threading.Tasks.Extensions.xml
 E:\New folder (2)\CountXum\bin\Debug\System.ValueTuple.xml
+C:\Users\PC\Desktop\CountXum\bin\Debug\BuildQtyTracker.exe.config
+C:\Users\PC\Desktop\CountXum\bin\Debug\BuildQtyTracker.exe
+C:\Users\PC\Desktop\CountXum\bin\Debug\BuildQtyTracker.pdb
+C:\Users\PC\Desktop\CountXum\bin\Debug\BarcodeStandard.dll
+C:\Users\PC\Desktop\CountXum\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\PC\Desktop\CountXum\bin\Debug\Newtonsoft.Json.dll
+C:\Users\PC\Desktop\CountXum\bin\Debug\System.Buffers.dll
+C:\Users\PC\Desktop\CountXum\bin\Debug\System.Drawing.Common.dll
+C:\Users\PC\Desktop\CountXum\bin\Debug\System.Memory.dll
+C:\Users\PC\Desktop\CountXum\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\PC\Desktop\CountXum\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\PC\Desktop\CountXum\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\PC\Desktop\CountXum\bin\Debug\System.Text.Json.dll
+C:\Users\PC\Desktop\CountXum\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\PC\Desktop\CountXum\bin\Debug\System.ValueTuple.dll
+C:\Users\PC\Desktop\CountXum\bin\Debug\Google.Apis.pdb
+C:\Users\PC\Desktop\CountXum\bin\Debug\Google.Apis.xml
+C:\Users\PC\Desktop\CountXum\bin\Debug\Google.Apis.Auth.pdb
+C:\Users\PC\Desktop\CountXum\bin\Debug\Google.Apis.Auth.xml
+C:\Users\PC\Desktop\CountXum\bin\Debug\Google.Apis.Core.pdb
+C:\Users\PC\Desktop\CountXum\bin\Debug\Google.Apis.Core.xml
+C:\Users\PC\Desktop\CountXum\bin\Debug\Google.Apis.Sheets.v4.pdb
+C:\Users\PC\Desktop\CountXum\bin\Debug\Google.Apis.Sheets.v4.xml
+C:\Users\PC\Desktop\CountXum\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\PC\Desktop\CountXum\bin\Debug\System.Buffers.xml
+C:\Users\PC\Desktop\CountXum\bin\Debug\System.Memory.xml
+C:\Users\PC\Desktop\CountXum\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\PC\Desktop\CountXum\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\PC\Desktop\CountXum\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\PC\Desktop\CountXum\bin\Debug\System.Text.Json.xml
+C:\Users\PC\Desktop\CountXum\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\PC\Desktop\CountXum\bin\Debug\System.ValueTuple.xml
+C:\Users\PC\Desktop\CountXum\obj\Debug\BuildQtyTracker.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\CountXum\obj\Debug\BuildQtyTracker.csproj.SuggestedBindingRedirects.cache
+C:\Users\PC\Desktop\CountXum\obj\Debug\BuildQtyTracker.Form1.resources
+C:\Users\PC\Desktop\CountXum\obj\Debug\BuildQtyTracker.Properties.Resources.resources
+C:\Users\PC\Desktop\CountXum\obj\Debug\BuildQtyTracker.csproj.GenerateResource.cache
+C:\Users\PC\Desktop\CountXum\obj\Debug\BuildQtyTracker.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\CountXum\obj\Debug\BuildQtyTracker.csproj.CopyComplete
+C:\Users\PC\Desktop\CountXum\obj\Debug\BuildQtyTracker.exe
+C:\Users\PC\Desktop\CountXum\obj\Debug\BuildQtyTracker.pdb
+C:\Users\PC\Desktop\CountXum\obj\Debug\BuildQtyTracker.LaptopForm.resources
