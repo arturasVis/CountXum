@@ -47,6 +47,10 @@
             this.SN_TextBox = new System.Windows.Forms.TextBox();
             this.SKU_textbox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.laptopDropdown = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.skuCombobox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -212,11 +216,53 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // laptopDropdown
+            // 
+            this.laptopDropdown.FormattingEnabled = true;
+            this.laptopDropdown.Location = new System.Drawing.Point(532, 32);
+            this.laptopDropdown.Name = "laptopDropdown";
+            this.laptopDropdown.Size = new System.Drawing.Size(212, 21);
+            this.laptopDropdown.TabIndex = 19;
+            this.laptopDropdown.SelectedIndexChanged += new System.EventHandler(this.changeSKUs);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(434, 24);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(81, 29);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "Model";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(434, 63);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(62, 29);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "SKU";
+            // 
+            // skuCombobox
+            // 
+            this.skuCombobox.FormattingEnabled = true;
+            this.skuCombobox.Location = new System.Drawing.Point(532, 72);
+            this.skuCombobox.Name = "skuCombobox";
+            this.skuCombobox.Size = new System.Drawing.Size(212, 21);
+            this.skuCombobox.TabIndex = 21;
+            this.skuCombobox.SelectedIndexChanged += new System.EventHandler(this.swapLaptop);
+            // 
             // LaptopForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.skuCombobox);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.laptopDropdown);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.SKU_textbox);
             this.Controls.Add(this.SN_TextBox);
@@ -264,5 +310,9 @@
         private System.Windows.Forms.TextBox SN_TextBox;
         private System.Windows.Forms.TextBox SKU_textbox;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox laptopDropdown;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox skuCombobox;
     }
 }

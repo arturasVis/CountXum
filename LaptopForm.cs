@@ -7,39 +7,60 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Newtonsoft.Json;
-using System.IO;
 
 namespace BuildQtyTracker
 {
     public partial class LaptopForm : Form
     {
+        Laptops laptops;
         public LaptopForm()
         {
             InitializeComponent();
+            laptops = new Laptops();
+            laptopDropdown.DataSource = laptops.getModelList();
+            laptopDropdown.Refresh();
+            skuCombobox.DataSource = laptops.getSKUs(laptopDropdown.Text);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string path = "C:\\Users\\PC\\Desktop\\CountXum\\save.JSON";
-            Laptop laptop = new Laptop(SKU_textbox.Text,Model_TextBox.Text,CPU_TextBox.Text,Memory_Texbox.Text,SSD_TextBox.Text,Screen_TextBox.Text,Colour_TextBox.Text,Grade_Textbox.Text,SN_TextBox.Text);
-            List<Laptop> laptops = new List<Laptop>();
-            if(File.Exists(path) )
+            
+            Laptop laptop=new Laptop(SKU_textbox.Text,Model_TextBox.Text,CPU_TextBox.Text,Memory_Texbox.Text,SSD_TextBox.Text,
+                Screen_TextBox.Text,Colour_TextBox.Text,Grade_Textbox.Text);
+            laptops.addLaptop(laptop);
+            laptopDropdown.DataSource= laptops.getModelList();
+            laptopDropdown.Refresh();
+
+
+        }
+
+        private void swapLaptop(object sender, EventArgs e)
+        {
+            Laptop laptop=laptops.getLaptop(skuCombobox.Text);
+            try
             {
-                string existingJson= File.ReadAllText(path);
-
-                laptops= JsonConvert.DeserializeObject<List<Laptop>>(existingJson) ?? new List<Laptop>();
+                SKU_textbox.Text = laptop.SKU;
+                Model_TextBox.Text = laptop.model;
+                CPU_TextBox.Text = laptop.cpu;
+                Memory_Texbox.Text = laptop.memory;
+                SSD_TextBox.Text = laptop.storage;
+                Screen_TextBox.Text = laptop.screen;
+                Colour_TextBox.Text = laptop.colour;
+                Grade_Textbox.Text = laptop.grade;
             }
-            else
+            catch (Exception)
             {
-                laptops=new List<Laptop>();
+
+                throw;
             }
-            laptops.Add(laptop);
-            string JSonString=JsonConvert.SerializeObject(laptops,Formatting.Indented);
 
-            File.WriteAllText("C:\\Users\\PC\\Desktop\\CountXum\\save.JSON",JSonString);
+            
+        }
 
-
+        private void changeSKUs(object sender, EventArgs e)
+        {
+            skuCombobox.DataSource = laptops.getSKUs(laptopDropdown.Text);
+            skuCombobox.Refresh();
         }
     }
 }

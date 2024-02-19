@@ -116,6 +116,7 @@
     <Compile Include="LaptopForm.Designer.cs">
       <DependentUpon>LaptopForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Laptops.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings1.Designer.cs">

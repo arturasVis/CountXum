@@ -1,0 +1,22 @@
+[
+  {
+    "SKU": "L57C14D16R512S 5480",
+    "model": "Dell Latitude 7480",
+    "cpu": "i5-7300U",
+    "memory": "16 GB",
+    "storage": "256 GB",
+    "screen": "14\"",
+    "colour": "Silver",
+    "grade": "Refurbished A"
+  },
+  {
+    "SKU": "L56C14D8R256S 5480",
+    "model": "Dell Latitude 7480",
+    "cpu": "i5-6300U",
+    "memory": "8  GB",
+    "storage": "512  GB",
+    "screen": "14\"",
+    "colour": "Silver",
+    "grade": "Refurbished A"
+  }
+]
