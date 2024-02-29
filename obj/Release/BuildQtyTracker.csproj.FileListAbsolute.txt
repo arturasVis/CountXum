@@ -67,3 +67,45 @@ E:\New folder (2)\CountXum\obj\Release\BuildQtyTracker.csproj.CoreCompileInputs.
 E:\New folder (2)\CountXum\obj\Release\BuildQtyTracker.csproj.CopyComplete
 E:\New folder (2)\CountXum\obj\Release\BuildQtyTracker.exe
 E:\New folder (2)\CountXum\obj\Release\BuildQtyTracker.pdb
+E:\repos\CountXum\bin\Release\BuildQtyTracker.exe.config
+E:\repos\CountXum\bin\Release\BuildQtyTracker.exe
+E:\repos\CountXum\bin\Release\BuildQtyTracker.pdb
+E:\repos\CountXum\bin\Release\BarcodeStandard.dll
+E:\repos\CountXum\bin\Release\Microsoft.Bcl.AsyncInterfaces.dll
+E:\repos\CountXum\bin\Release\Newtonsoft.Json.dll
+E:\repos\CountXum\bin\Release\System.Buffers.dll
+E:\repos\CountXum\bin\Release\System.Drawing.Common.dll
+E:\repos\CountXum\bin\Release\System.Memory.dll
+E:\repos\CountXum\bin\Release\System.Numerics.Vectors.dll
+E:\repos\CountXum\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+E:\repos\CountXum\bin\Release\System.Text.Encodings.Web.dll
+E:\repos\CountXum\bin\Release\System.Text.Json.dll
+E:\repos\CountXum\bin\Release\System.Threading.Tasks.Extensions.dll
+E:\repos\CountXum\bin\Release\System.ValueTuple.dll
+E:\repos\CountXum\bin\Release\Google.Apis.pdb
+E:\repos\CountXum\bin\Release\Google.Apis.xml
+E:\repos\CountXum\bin\Release\Google.Apis.Auth.pdb
+E:\repos\CountXum\bin\Release\Google.Apis.Auth.xml
+E:\repos\CountXum\bin\Release\Google.Apis.Core.pdb
+E:\repos\CountXum\bin\Release\Google.Apis.Core.xml
+E:\repos\CountXum\bin\Release\Google.Apis.Sheets.v4.pdb
+E:\repos\CountXum\bin\Release\Google.Apis.Sheets.v4.xml
+E:\repos\CountXum\bin\Release\Microsoft.Bcl.AsyncInterfaces.xml
+E:\repos\CountXum\bin\Release\System.Buffers.xml
+E:\repos\CountXum\bin\Release\System.Memory.xml
+E:\repos\CountXum\bin\Release\System.Numerics.Vectors.xml
+E:\repos\CountXum\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+E:\repos\CountXum\bin\Release\System.Text.Encodings.Web.xml
+E:\repos\CountXum\bin\Release\System.Text.Json.xml
+E:\repos\CountXum\bin\Release\System.Threading.Tasks.Extensions.xml
+E:\repos\CountXum\bin\Release\System.ValueTuple.xml
+E:\repos\CountXum\obj\Release\BuildQtyTracker.csproj.AssemblyReference.cache
+E:\repos\CountXum\obj\Release\BuildQtyTracker.csproj.SuggestedBindingRedirects.cache
+E:\repos\CountXum\obj\Release\BuildQtyTracker.Form1.resources
+E:\repos\CountXum\obj\Release\BuildQtyTracker.LaptopForm.resources
+E:\repos\CountXum\obj\Release\BuildQtyTracker.Properties.Resources.resources
+E:\repos\CountXum\obj\Release\BuildQtyTracker.csproj.GenerateResource.cache
+E:\repos\CountXum\obj\Release\BuildQtyTracker.csproj.CoreCompileInputs.cache
+E:\repos\CountXum\obj\Release\BuildQtyTracker.csproj.CopyComplete
+E:\repos\CountXum\obj\Release\BuildQtyTracker.exe
+E:\repos\CountXum\obj\Release\BuildQtyTracker.pdb

@@ -7,7 +7,8 @@
     "storage": "256 GB",
     "screen": "14\"",
     "colour": "Silver",
-    "grade": "Refurbished A"
+    "grade": "Refurbished A",
+    "windows": null
   },
   {
     "SKU": "L56C14D8R256S 5480",
@@ -17,6 +18,29 @@
     "storage": "512  GB",
     "screen": "14\"",
     "colour": "Silver",
-    "grade": "Refurbished A"
+    "grade": "Refurbished A",
+    "windows": null
+  },
+  {
+    "SKU": "L56C12D16R512S 820g3",
+    "model": "HP EliteBook 820 G3",
+    "cpu": "i5-6200U",
+    "memory": "16  GB",
+    "storage": "512  GB",
+    "screen": "12.5\"",
+    "colour": "Silver",
+    "grade": "Refurbished A",
+    "windows": null
+  },
+  {
+    "SKU": "L57C14fD16R512S 5480",
+    "model": "Ddf",
+    "cpu": "df",
+    "memory": "df",
+    "storage": "dsafdsaf",
+    "screen": "dsaf",
+    "colour": "sadf",
+    "grade": "Refurbdsafished A",
+    "windows": "sadf"
   }
 ]

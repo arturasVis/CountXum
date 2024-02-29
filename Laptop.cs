@@ -17,7 +17,8 @@ namespace BuildQtyTracker
         public string screen { get; }
         public string colour { get; }
         public string grade { get; }
-        public Laptop(string SKU, string model, string cpu, string memory,string storage, string screen, string colour, string grade)
+        public string windows { get; }
+        public Laptop(string SKU, string model, string cpu, string memory,string storage, string screen, string colour, string grade,string windows)
         {
             this.SKU = SKU;
             this.model = model;
@@ -27,7 +28,7 @@ namespace BuildQtyTracker
             this.screen = screen;
             this.colour = colour;
             this.grade = grade;
-
+            this.windows = windows;
         }
     }
 }
